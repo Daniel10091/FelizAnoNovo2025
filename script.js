@@ -44,7 +44,7 @@ class Firework {
   explode() {
     this.audio.pause(); // Para o som de foguete subindo
     this.audio.currentTime = 0; // Reseta o som
-    playExplosionSound(this.isLarge ? 0.2 : 0.1); // Toca som de explosão com volume ajustado
+    playExplosionSound(this.isLarge ? 0.1 : 0.05); // Toca som de explosão com volume ajustado
     createExplosion(this.x, this.y, this.isLarge); // Cria confetes no ponto de explosão
   }
 
@@ -105,7 +105,7 @@ class Confetti {
 }
 
 // Função para tocar o som de explosão
-function playExplosionSound(volume = 0.2) {
+function playExplosionSound(volume = 0.1) {
   const explosionSound = document.createElement('audio'); // Cria elemento <audio>
   explosionSound.src = 'explosion.mp3'; // Fonte do som de explosão
   explosionSound.volume = volume; // Ajusta o volume da explosão (0.0 a 1.0)
@@ -171,11 +171,11 @@ startShow();
 
 const typingText = [
   "Amigos, que o novo ano seja repleto de momentos inesquecíveis ao nosso lado. Que não nos faltem risadas, aventuras e muito companheirismo!",
-  "Que cada dia de 2024 traga novas conquistas e ainda mais união entre a nossa turma. Vocês são parte essencial da minha felicidade.",
+  "Que cada dia de 2025 traga novas conquistas e ainda mais união entre a nossa turma. Vocês são parte essencial da minha felicidade.",
   "Neste ano que chega, desejo que nossa amizade se fortaleça ainda mais. Que continuemos celebrando juntos cada vitória e apoiando nos momentos difíceis.",
-  "A cada novo ciclo, lembro o quanto sou grato(a) por ter amigos tão especiais ao meu lado. Que 2024 seja um ano de muitas histórias para compartilharmos.",
-  "Para os amigos que alegram minha vida: que o ano novo seja cheio de alegrias, sonhos realizados e muita esperança em nossos corações. Feliz 2024!",
-  "Feliz ano novo!"
+  "A cada novo ciclo, lembro o quanto sou grato(a) por ter amigos tão especiais ao meu lado. Que 2025 seja um ano de muitas histórias para compartilharmos.",
+  "Para os amigos que alegram minha vida: que o ano novo seja cheio de alegrias, sonhos realizados e muita esperança em nossos corações. Feliz 2025!",
+  "FELIZ ANO NOVO!"
 ];
 
 const typingElement = document.getElementById("typingEffect");
