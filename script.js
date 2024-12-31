@@ -167,7 +167,7 @@ function startShow() {
   animate();
 }
 
-startShow();
+// startShow();
 
 const typingText = [
   "Amigos, que o novo ano seja repleto de momentos inesquecíveis ao nosso lado. Que não nos faltem risadas, aventuras e muito companheirismo!",
@@ -179,6 +179,10 @@ const typingText = [
 ];
 
 const typingElement = document.getElementById("typingEffect");
+const welcomeScreen = document.getElementById("welcomeScreen");
+const startButton = document.getElementById("startButton");
+const page = document.getElementById("page");
+
 let currentParagraph = 0;
 let currentChar = 0;
 
@@ -201,4 +205,14 @@ function typeText() {
 }
 
 // Iniciar o efeito de máquina de escrever
-typeText();
+// typeText();
+
+function startShoww() {
+  welcomeScreen.style.display = "none"; // Esconde a tela inicial
+  page.style.display = "flex";
+  startShow(); // Inicia o show de fogos
+  typeText(); // Inicia o efeito de máquina de escrever
+}
+
+// Adiciona o evento ao botão para iniciar o show
+startButton.addEventListener("click", startShoww);

@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Ano Novo 2025</title>
+  <title>Show de Fogos - Feliz Ano Novo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="message">🎉 Feliz Ano Novo 2025! 🎆</h1>
+  <div id="welcomeScreen">
+    <h1>🎆 Bem-vindo ao Show de Fogos 🎆</h1>
+    <p>Por favor, clique no botão abaixo para iniciar o show com áudio e animação:</p>
+    <button id="startButton">Iniciar</button>
+  </div>
+  <div id="page">
+    <h1 id="title">🎆 Feliz Ano Novo! 🎆</h1>
     <div id="typingEffect"></div>
-    <audio id="backgroundMusic" src="fireworks-music.mp3" loop></audio> <!-- Música de fundo -->
-    <audio id="explosionSound" src="explosion.mp3"></audio> <!-- Som da explosão -->
     <canvas id="confettiCanvas"></canvas>
+    <audio id="backgroundMusic" src="fireworks-music.mp3" loop></audio>
   </div>
   <script src="script.js"></script>
 </body>

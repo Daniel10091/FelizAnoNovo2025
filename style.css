@@ -1,16 +1,39 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-block: 6rem;
     background: linear-gradient(to bottom, #000428, #004e92);
     color: white;
     font-family: 'Arial', sans-serif;
     min-height: 100vh;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  
+  #welcomeScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 100;
+  }
+  
+  #welcomeScreen button {
+    background: #1e90ff;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #welcomeScreen button:hover {
+    background: #4682b4;
   }
   
   .container {
@@ -22,6 +45,16 @@ body {
     font-weight: bold;
     animation: pulse 1.5s infinite ease-in-out;
     z-index: 10;
+  }
+  
+  #page {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-block: 6rem;
+    z-index: 10000;
   }
   
   #typingEffect {
