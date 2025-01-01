@@ -1,85 +1,116 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, #000428, #004e92);
-    color: white;
-    font-family: 'Arial', sans-serif;
-    min-height: 100vh;
-    overflow: hidden;
-    overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #000428, #004e92);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#welcomeScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 100;
+}
+
+#welcomeScreen h1 {
+  font-size: 5cqmin;
+}
+
+#welcomeScreen p {
+  font-size: 2cqmin;
+}
+
+#welcomeScreen button {
+  background: #1e90ff;
+  color: #fff;
+  font-size: 2.4cqmin;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#welcomeScreen button:hover {
+  background: #4682b4;
+}
+
+.container {
+  text-align: center;
+}
+
+.message {
+  font-size: 3em;
+  font-weight: bold;
+  animation: pulse 1.5s infinite ease-in-out;
+  z-index: 10;
+}
+
+#page {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: 6rem;
+  z-index: 10000;
+}
+
+#title {
+  font-size: 5cqmin;
+}
+
+#typingEffect {
+  font-size: 2.4cqmin;
+  margin: 0 2rem;
+  max-width: 800px;
+  white-space: pre-wrap;
+  line-height: 1.8;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  #welcomeScreen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 100;
+  50% {
+    transform: scale(1.1);
   }
-  
-  #welcomeScreen button {
-    background: #1e90ff;
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  #welcomeScreen button:hover {
-    background: #4682b4;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  .message {
-    font-size: 3em;
-    font-weight: bold;
-    animation: pulse 1.5s infinite ease-in-out;
-    z-index: 10;
-  }
-  
-  #page {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-block: 6rem;
-    z-index: 10000;
-  }
-  
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+/* @media only screen and (max-width: 768px) {
+  #welcomeScreen p {
+    font-size: 3cqmin;
+  } 
+} */
+
+@media only screen and (max-width: 768px) {
+  #welcomeScreen p,
   #typingEffect {
-    font-size: 1.5rem;
-    margin: 0 auto;
-    max-width: 800px;
-    white-space: pre-wrap;
-    line-height: 1.8;
+    font-size: 3cqmin;
   }
-  
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
+  #welcomeScreen button {
+    font-size: 4cqmin;
   }
-  
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
+  #title {
+    font-size: 7cqmin;
   }
-  
+}
