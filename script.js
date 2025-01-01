@@ -44,7 +44,7 @@ class Firework {
   explode() {
     this.audio.pause(); // Para o som de foguete subindo
     this.audio.currentTime = 0; // Reseta o som
-    playExplosionSound(this.isLarge ? 0.4 : 0.3); // Toca som de explosão com volume ajustado
+    playExplosionSound(this.isLarge ? 0.1 : 0.05); // Toca som de explosão com volume ajustado
     createExplosion(this.x, this.y, this.isLarge); // Cria confetes no ponto de explosão
   }
 
@@ -105,7 +105,7 @@ class Confetti {
 }
 
 // Função para tocar o som de explosão
-function playExplosionSound(volume = 0.4) {
+function playExplosionSound(volume = 0.1) {
   const explosionSound = document.createElement('audio'); // Cria elemento <audio>
   explosionSound.src = 'explosion.mp3'; // Fonte do som de explosão
   explosionSound.volume = volume; // Ajusta o volume da explosão (0.0 a 1.0)
@@ -162,7 +162,7 @@ function animate() {
 
 // Inicia o show de fogos
 function startShow() {
-  // backgroundMusic.play(); // Toca a música
+  backgroundMusic.play(); // Toca a música
   startFireworks(); // Começa os fogos saindo do chão
   animate();
 }
