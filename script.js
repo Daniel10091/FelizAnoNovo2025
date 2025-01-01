@@ -42,17 +42,17 @@ class Firework {
   }
 
   explode() {
-    this.audio.pause(); // Para o som de foguete subindo
+    // this.audio.pause(); // Para o som de foguete subindo
     this.audio.currentTime = 0; // Reseta o som
     playExplosionSound(this.isLarge ? 0.2 : 0.1); // Toca som de explosão com volume ajustado
     createExplosion(this.x, this.y, this.isLarge); // Cria confetes no ponto de explosão
   }
 
   playFireworkSound() {
-    const fireworkSound = document.createElement('audio');
-    fireworkSound.src = 'firework-launch.mp3'; // Som do foguete subindo
-    fireworkSound.volume = 0.8; // Ajuste o volume conforme necessário
-    fireworkSound.play();
+    // const fireworkSound = document.createElement('audio');
+    // fireworkSound.src = 'firework-launch.mp3'; // Som do foguete subindo
+    // fireworkSound.volume = 0.8; // Ajuste o volume conforme necessário
+    // fireworkSound.play();
     document.body.appendChild(fireworkSound);
 
     // Remove o elemento de áudio automaticamente ao terminar
