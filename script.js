@@ -162,7 +162,7 @@ function animate() {
 
 // Inicia o show de fogos
 function startShow() {
-  backgroundMusic.play(); // Toca a música
+  // backgroundMusic.play(); // Toca a música
   startFireworks(); // Começa os fogos saindo do chão
   animate();
 }
