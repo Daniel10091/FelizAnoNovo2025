@@ -71,7 +71,7 @@ class Confetti {
     const speed = Math.random() * 3 + 1; // Velocidade radial reduzida (raio menor)
     this.x = explosionCenterX;
     this.y = explosionCenterY;
-    this.size = Math.random() * 8 + 3; // Tamanho do confete
+    this.size = Math.random() * 4 + 3; // Tamanho do confete
     this.color = confettiColors[Math.floor(Math.random() * confettiColors.length)];
     this.speedX = Math.cos(angle) * speed; // Velocidade horizontal com base no ângulo
     this.speedY = Math.sin(angle) * speed; // Velocidade vertical com base no ângulo
