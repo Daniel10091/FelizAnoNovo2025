@@ -19,7 +19,7 @@ class Firework {
     this.speedY = -5 - Math.random() * 3; // Velocidade de subida
     this.isLarge = isLarge; // Determina se será uma explosão grande
     this.color = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-    this.audio = this.playFireworkSound(); // Toca o som de foguete ao ser lançado
+    // this.audio = this.playFireworkSound(); // Toca o som de foguete ao ser lançado
   }
 
   update() {
@@ -43,16 +43,16 @@ class Firework {
 
   explode() {
     // this.audio.pause(); // Para o som de foguete subindo
-    this.audio.currentTime = 0; // Reseta o som
+    // this.audio.currentTime = 0; // Reseta o som
     playExplosionSound(this.isLarge ? 0.2 : 0.1); // Toca som de explosão com volume ajustado
     createExplosion(this.x, this.y, this.isLarge); // Cria confetes no ponto de explosão
   }
 
   playFireworkSound() {
-    // const fireworkSound = document.createElement('audio');
-    // fireworkSound.src = 'firework-launch.mp3'; // Som do foguete subindo
-    // fireworkSound.volume = 0.8; // Ajuste o volume conforme necessário
-    // fireworkSound.play();
+    const fireworkSound = document.createElement('audio');
+    fireworkSound.src = 'firework-launch.mp3'; // Som do foguete subindo
+    fireworkSound.volume = 0.8; // Ajuste o volume conforme necessário
+    fireworkSound.play();
     document.body.appendChild(fireworkSound);
 
     // Remove o elemento de áudio automaticamente ao terminar
@@ -170,7 +170,7 @@ function startShow() {
 // startShow();
 
 const typingText = [
-  "Família e amigos, que o novo ano seja repleto de momentos inesquecíveis ao nosso lado. Que não nos faltem risadas, aventuras e muito companheirismo!",
+  "Amigos, que o novo ano seja repleto de momentos inesquecíveis ao nosso lado. Que não nos faltem risadas, aventuras e muito companheirismo!",
   "Que cada dia de 2025 traga novas conquistas e ainda mais união entre a nossa turma. Vocês são parte essencial da minha felicidade.",
   "Neste ano que chega, desejo que nossa amizade se fortaleça ainda mais. Que continuemos celebrando juntos cada vitória e apoiando nos momentos difíceis.",
   "A cada novo ciclo, lembro o quanto sou grato(a) por ter amigos tão especiais ao meu lado. Que 2025 seja um ano de muitas histórias para compartilharmos.",
@@ -195,6 +195,7 @@ function typeText() {
       currentChar++;
       setTimeout(typeText, 50); // Velocidade da digitação
     } else {
+
       // Parágrafo concluído
       currentParagraph++;
       currentChar = 0;
