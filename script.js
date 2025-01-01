@@ -175,7 +175,7 @@ const typingText = [
   "Neste ano que chega, desejo que nossa amizade se fortaleça ainda mais. Que continuemos celebrando juntos cada vitória e apoiando nos momentos difíceis.",
   "A cada novo ciclo, lembro o quanto sou grato(a) por ter amigos tão especiais ao meu lado. Que 2025 seja um ano de muitas histórias para compartilharmos.",
   "Para os amigos que alegram minha vida: que o ano novo seja cheio de alegrias, sonhos realizados e muita esperança em nossos corações. Feliz 2025!",
-  "FELIZ ANO NOVO!"
+  "🎊 FELIZ ANO NOVO! 🎊"
 ];
 
 const typingElement = document.getElementById("typingEffect");
