@@ -170,7 +170,7 @@ function startShow() {
 // startShow();
 
 const typingText = [
-  "Amigos, que o novo ano seja repleto de momentos inesquecíveis ao nosso lado. Que não nos faltem risadas, aventuras e muito companheirismo!",
+  "Família e amigos, que o novo ano seja repleto de momentos inesquecíveis ao nosso lado. Que não nos faltem risadas, aventuras e muito companheirismo!",
   "Que cada dia de 2025 traga novas conquistas e ainda mais união entre a nossa turma. Vocês são parte essencial da minha felicidade.",
   "Neste ano que chega, desejo que nossa amizade se fortaleça ainda mais. Que continuemos celebrando juntos cada vitória e apoiando nos momentos difíceis.",
   "A cada novo ciclo, lembro o quanto sou grato(a) por ter amigos tão especiais ao meu lado. Que 2025 seja um ano de muitas histórias para compartilharmos.",
